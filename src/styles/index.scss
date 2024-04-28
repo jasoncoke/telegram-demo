@@ -1,4 +1,5 @@
 @import './normalize.scss';
+@import '../iconfont/iconfont.css';
 
 a {
   background-color: transparent;
@@ -231,24 +232,15 @@ body,
 #app {
   width: 100%;
   height: 100vh;
-  color: #262626;
-  background: #ffffff;
+  color: #ffffff;
+  background: #000000;
   position: relative;
 }
 
 .app-container {
-  width: $center-width;
-  min-height: calc(100vh - $footer-height - $navbar-height - $footer-mt-px);
-  margin-top: $navbar-height;
+  width: 100%;
 }
 
-@media (max-width: $mobile-width) {
-  .app-container {
-    width: 100%;
-    margin-top: 0px;
-  }
-}
-
-.w-main {
-  width: $center-width;
+.curson-pointer {
+  cursor: pointer;
 }
