@@ -15,6 +15,9 @@
       <span class="logo-text">EOB</span>
     </section>
 
+    <!-- 数字滚动 -->
+    <Number />
+
     <!-- menu -->
     <Menu />
   </div>
@@ -22,7 +25,7 @@
 
 <script setup lang="ts">
 import Menu from '@/components/Menu.vue'
-
+import Number from '@/components/Number.vue'
 </script>
 
 <style lang="scss" scoped>
@@ -49,12 +52,12 @@ import Menu from '@/components/Menu.vue'
   align-items: center;
   justify-content: center;
   img {
-    width: 14px;
-    height: 14px;
+    width: 1rem;
+    height: 1rem;
     margin-right: .25rem;
   }
   .logo-text {
-    font-size: 16px;
+    font-size: 1rem;
   }
 }
 </style>
