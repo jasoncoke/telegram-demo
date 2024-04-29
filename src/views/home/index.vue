@@ -2,7 +2,7 @@
   <div class="app-container">
     <!-- Ranking list -->
     <section class="rank-wrapper">
-      <div class="rank-box curson-pointer">
+      <div class="rank-box">
         <i class="iconfont icon-rank"></i>
         <span class="rank-text">Rank</span>
         <i class="iconfont icon-arrow_right"></i>

@@ -1,28 +1,40 @@
  <template>
   <section class="menu-wrapper">
     <div>
-      <div class="menu-item bg-1">
-        <i class="iconfont icon-tip"></i>
-        <span>About</span>
+      <div class="menu-item menu-item_left">
+        <img src="@/assets/menu-item-1.png" alt="">
+        <div class="menu-item_label">
+          <i class="iconfont icon-tip"></i>
+          <span>About</span>
+        </div>
       </div>
-      <div class="menu-item bg-3">
-        <i class="iconfont icon-cpu"></i>
-        <span>Earn</span>
+      <div class="menu-item menu-item_left">
+        <img src="@/assets/menu-item-3.png" alt="">
+        <div class="menu-item_label">
+          <i class="iconfont icon-cpu"></i>
+          <span>Earn</span>
+        </div>
       </div>
     </div>
 
     <div class="mine-btn">
-      <span class="mine-btn-text">Mine</span>
+      <img src="@/assets/mine-btn.png" alt="">
     </div>
 
-    <div>
-      <div class="menu-item bg-2">
-        <i class="iconfont icon-frends"></i>
-        <span>Frends</span>
+    <div class="menu-item-wrapper">
+      <div class="menu-item menu-item_right">
+        <img src="@/assets/menu-item-2.png" alt="">
+        <div class="menu-item_label">
+          <i class="iconfont icon-frends"></i>
+          <span>Frends</span>
+        </div>
       </div>
-      <div class="menu-item bg-4">
-        <i class="iconfont icon-rocket"></i>
-        <span>Boost</span>
+      <div class="menu-item menu-item_right">
+        <img src="@/assets/menu-item-4.png" alt="">
+        <div class="menu-item_label">
+          <i class="iconfont icon-rocket"></i>
+          <span>Boost</span>
+        </div>
       </div>
     </div>
   </section>
@@ -38,67 +50,54 @@
   display: flex;
   padding: 0 1rem;
   box-sizing: border-box;
-  justify-content: space-between;
   & > * {
     flex: 2;
   }
 }
+
+.menu-item-wrapper {
+  z-index: 5;
+}
+
 .menu-item {
-  height: 60px;
+  width: 100%;
+  min-height: 3.75rem;
   color: #FFD49C;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  position: relative;
   z-index: 5;
   & + .menu-item {
     margin-top: .625rem;
   }
-  &.bg-1 {
-    background: url('@/assets/menu-item-1.png') no-repeat;
+  & img {
+    width: 100%;
   }
-  &.bg-2 {
-    background: url('@/assets/menu-item-2.png') no-repeat;
+  & .menu-item_label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    transform: translate(0%, -50%);
   }
-  &.bg-3 {
-    background: url('@/assets/menu-item-3.png') no-repeat;
+  &.menu-item_left .menu-item_label {
+    left: 25%;
   }
-  &.bg-4 {
-    background: url('@/assets/menu-item-4.png') no-repeat;
+  &.menu-item_right .menu-item_label {
+    right: 25%;
   }
 }
+
 .mine-btn {
-  flex: 1;
+  flex: 1.25;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
-  &::before {
-    content: '';
+  z-index: 6;
+  & img {
     position: absolute;
-    top: -0.625rem;
-    width: 166px;
-    height: 166px;
-    background: url('@/assets/button-platform.png') no-repeat center;
-    z-index: 1;
-  }
-  &::after {
-    content: '';
-    position: absolute;
-    top: .25rem;
-    left: -2rem;
-    width: 129px;
-    height: 129px;
-    background: url('@/assets/button-bg.png') no-repeat;
-    z-index: 1;
-  }
-  & .mine-btn-text {
-    z-index: 2;
-    font-size: 1.625rem;
-    background: linear-gradient(118.81126791266382deg, #5B320C 0%, #2C1206 100%);
-    -webkit-background-clip: text;
-    background-clip: text; 
-    color: transparent; 
+    height: 100%;
+    object-fit: cover;
   }
 }
 </style>
