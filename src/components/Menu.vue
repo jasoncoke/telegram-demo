@@ -18,7 +18,8 @@
     </div>
 
     <div class="mine-btn">
-      <img src="@/assets/mine-btn.png" alt="">
+      <img src="@/assets/mine-btn-bg_active.png" alt="">
+      <span>Mine</span>
     </div>
 
     <div class="menu-item-wrapper">
@@ -98,6 +99,14 @@
     position: absolute;
     height: 100%;
     object-fit: cover;
+  }
+  & > span {
+    z-index: 7;
+    font-size: 1.625rem;
+    background: linear-gradient(118.81126791266382deg, #5B320C 0%, #2C1206 100%);
+    -webkit-background-clip: text;
+    background-clip: text; 
+    color: transparent; 
   }
 }
 </style>
