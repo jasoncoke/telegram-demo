@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "yarn build && surgejs deploy"
   },
   "dependencies": {
     "lottie-web": "^5.12.2",
