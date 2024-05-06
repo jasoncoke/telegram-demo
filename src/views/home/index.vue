@@ -18,20 +18,34 @@
     <!-- 数字滚动 -->
     <Number />
 
+    <section class="ore-wrapper">
+      <div class="ore-img">
+        <Lottie :data="oreJson" style="width: 150px;"/>
+      </div>
+      <img v-if="waiting" class="iron-img" src="@/assets/iron.gif" />
+      <img v-else class="iron-img" src="@/assets/iron.png" />
+    </section>
+    <section class="gpu-wrapper">
+      My GPU: 1000k 
+    </section>
+
     <!-- menu -->
-    <Menu />
+    <Menu @start="waiting = true"/>
 
     <Rank v-model:show="showRankModel" @close="showRankModel = false" />
   </div>
 </template>
 
 <script setup lang="ts">
-import Menu from './components/Menu.vue'
+import Lottie from '@/components/Lottie.vue'
 import Number from '@/components/Number.vue'
+import Menu from './components/Menu.vue'
 import Rank from './components/Rank.vue'
+import oreJson from '@/assets/json/ore.json'
 import { ref } from 'vue'
 
 const showRankModel = ref(false)
+const waiting = ref(false) // 是否在等待
 </script>
 
 <style lang="scss" scoped>
@@ -65,5 +79,36 @@ const showRankModel = ref(false)
   .logo-text {
     font-size: 1rem;
   }
+}
+
+.ore-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .ore-img {
+    width: 9.375rem;
+    background: url('@/assets/starlight.gif') no-repeat center;
+    background-size: cover;
+  }
+  .iron-img {
+    width: 8rem;
+    position: absolute;
+    top: -55%;
+    left: 50%;
+    transform: translate(10%, 50%);
+    z-index: 10;
+  }
+}
+
+.gpu-wrapper {
+  max-width: 13.625rem;
+  text-align: center;
+  margin: 0 auto;
+  padding: .5rem 4.375rem;
+  background: linear-gradient( 180deg, #000000 0%, #040304 100%);
+  border-radius: .375rem;
+  border: 1px solid #241F1E;
+  color: #D9C49F;
 }
 </style>

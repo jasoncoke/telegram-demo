@@ -17,7 +17,7 @@
       </div>
     </div>
 
-    <div class="mine-btn">
+    <div class="mine-btn" @click="emits('start')">
       <img src="@/assets/mine-btn-bg_active.png" alt="">
       <span>Mine</span>
     </div>
@@ -52,6 +52,8 @@ import { ref } from 'vue';
 import Frens from './Frens.vue'
 import Earn from './Earn.vue'
 import Boost from './Boost.vue'
+
+const emits = defineEmits(['start'])
 
 const showFrensModel = ref(false)
 const showEarnModel = ref(false)

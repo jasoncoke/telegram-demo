@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "lottie-web": "^5.12.2",
     "sass": "^1.75.0",
     "vant": "^4.9.0",
     "vue": "^3.4.21"
