@@ -1,7 +1,7 @@
 <template>
   <div class="app-container">
     <!-- Ranking list -->
-    <section class="rank-wrapper">
+    <section class="rank-wrapper" @click="showRankModel = true">
       <div class="rank-box">
         <i class="iconfont icon-rank"></i>
         <span class="rank-text">Rank</span>
@@ -20,12 +20,18 @@
 
     <!-- menu -->
     <Menu />
+
+    <Rank v-model:show="showRankModel" @close="showRankModel = false" />
   </div>
 </template>
 
 <script setup lang="ts">
 import Menu from './components/Menu.vue'
 import Number from '@/components/Number.vue'
+import Rank from './components/Rank.vue'
+import { ref } from 'vue'
+
+const showRankModel = ref(false)
 </script>
 
 <style lang="scss" scoped>
