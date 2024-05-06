@@ -32,7 +32,7 @@
       </div>
       <div class="menu-item menu-item_right">
         <img src="@/assets/menu-item-4.png" alt="">
-        <div class="menu-item_label">
+        <div class="menu-item_label" @click="showBoostModel = true">
           <i class="iconfont icon-rocket"></i>
           <span>Boost</span>
         </div>
@@ -42,6 +42,8 @@
     <Frens v-model:show="showFrensModel" @close="showFrensModel = false"/>
 
     <Earn v-model:show="showEarnModel" @close="showEarnModel = false" />
+
+    <Boost v-model:show="showBoostModel" @close="showBoostModel = false" />
   </section>
 </template>
 
@@ -49,9 +51,11 @@
 import { ref } from 'vue';
 import Frens from './Frens.vue'
 import Earn from './Earn.vue'
+import Boost from './Boost.vue'
 
 const showFrensModel = ref(false)
 const showEarnModel = ref(false)
+const showBoostModel = ref(false)
 </script> 
 
 <style lang="scss" scoped>
