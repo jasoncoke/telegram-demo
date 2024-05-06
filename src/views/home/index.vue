@@ -24,7 +24,7 @@
 </template>
 
 <script setup lang="ts">
-import Menu from '@/components/Menu.vue'
+import Menu from './components/Menu.vue'
 import Number from '@/components/Number.vue'
 </script>
 

@@ -25,9 +25,9 @@
     <div class="menu-item-wrapper">
       <div class="menu-item menu-item_right">
         <img src="@/assets/menu-item-2.png" alt="">
-        <div class="menu-item_label">
+        <div class="menu-item_label" @click="showFrensModel = true">
           <i class="iconfont icon-frends"></i>
-          <span>Frends</span>
+          <span>Frens</span>
         </div>
       </div>
       <div class="menu-item menu-item_right">
@@ -38,11 +38,16 @@
         </div>
       </div>
     </div>
+
+    <Frens v-model:show="showFrensModel" @close="showFrensModel = false"/>
   </section>
 </template>
 
 <script setup lang="ts">
+import { ref } from 'vue';
+import Frens from './Frens.vue'
 
+const showFrensModel = ref(false)
 </script>
 
 <style lang="scss" scoped>
