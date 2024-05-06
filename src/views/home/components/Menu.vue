@@ -10,7 +10,7 @@
       </div>
       <div class="menu-item menu-item_left">
         <img src="@/assets/menu-item-3.png" alt="">
-        <div class="menu-item_label">
+        <div class="menu-item_label" @click="showEarnModel = true">
           <i class="iconfont icon-cpu"></i>
           <span>Earn</span>
         </div>
@@ -26,7 +26,7 @@
       <div class="menu-item menu-item_right">
         <img src="@/assets/menu-item-2.png" alt="">
         <div class="menu-item_label" @click="showFrensModel = true">
-          <i class="iconfont icon-frends"></i>
+          <i class="iconfont icon-frens"></i>
           <span>Frens</span>
         </div>
       </div>
@@ -40,15 +40,19 @@
     </div>
 
     <Frens v-model:show="showFrensModel" @close="showFrensModel = false"/>
+
+    <Earn v-model:show="showEarnModel" @close="showEarnModel = false" />
   </section>
 </template>
 
 <script setup lang="ts">
 import { ref } from 'vue';
 import Frens from './Frens.vue'
+import Earn from './Earn.vue'
 
 const showFrensModel = ref(false)
-</script>
+const showEarnModel = ref(false)
+</script> 
 
 <style lang="scss" scoped>
 .menu-wrapper {

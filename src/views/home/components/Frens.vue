@@ -4,7 +4,7 @@
     position="bottom"
     round
     closeable
-    :style="{ height: '300px' }"
+    :style="{ height: '320px' }"
     class="frens-popup"
     @close="emits('close')"
   >
@@ -47,7 +47,7 @@ const inviteList = ref([
 
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .frens-popup {
   background: linear-gradient( 180deg, #3B2F1D 0%, #1A1815 100%);
   box-shadow: inset 0px 10px 30px 0px rgba(253,216,169,0.15);
